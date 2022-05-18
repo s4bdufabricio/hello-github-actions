@@ -10,7 +10,7 @@ jobs:
 
       -
         name: Extract branch name
-        run: echo running on branche ${GITHUB_REF##*/}
+        run: echo running on branche ${{GITHUB_REF##*/}}
 
       -
         name: Build
