@@ -6,7 +6,12 @@ jobs:
     name: Hello world action
     runs-on: ubuntu-latest
     steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo running on branche ${GITHUB_REF##*/}
+        id: extract_branch
+      - name: Run Docker
       - uses: actions/checkout@v1
       - uses: ./action-a
         with:
-          MY_NAME: "Mona"
+          MY_NAME: "Eduardo"

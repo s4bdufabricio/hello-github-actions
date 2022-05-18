@@ -7,6 +7,10 @@ inputs:
     description: "Who to greet"
     required: true
     default: "World"
+  CURRENT_BRANCH:
+    description: "current branch for action"
+    required: true
+    default: "main"
 
 runs:
   using: "docker"
