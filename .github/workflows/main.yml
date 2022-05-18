@@ -6,11 +6,13 @@ jobs:
     name: Hello world action
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      -
+        name: Git checkout
+        uses: actions/checkout@v2
 
       -
         name: Extract branch name
-        run: echo running on branche ${{GITHUB_REF##*/}}
+        run: echo running on branche ${GITHUB_REF##*/}
 
       -
         name: Build
